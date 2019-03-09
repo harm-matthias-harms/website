@@ -86,3 +86,8 @@ sw.*
 # Mac Files
 **/.DS_Store
 .DS_Store
+
+# Other files
+Dockerfile
+.rancher-pipeline.yml
+deployment.yml
