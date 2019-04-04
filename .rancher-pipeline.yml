@@ -4,7 +4,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: personal-website:${CICD_EXECUTION_SEQUENCE}
+      tag: personal-website:latest
 - name: Deploy
   steps:
   - applyYamlConfig:

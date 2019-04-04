@@ -1,3 +1,8 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: website
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -6,6 +11,11 @@ metadata:
   labels:
     app: personal
 spec:
+  strategy:
+  type: RollingUpdate
+  rollingUpdate:
+     maxUnavailable: 25%
+     maxSurge: 1
   selector:
     matchLabels:
       app: personal
@@ -14,13 +24,50 @@ spec:
       labels:
         app: personal
     spec:
+      imagePullPolicy: Always
       imagePullSecrets:
       - name: pipeline-docker-registry
       containers:
       - name: personal
-        image: ${CICD_IMAGE}:${CICD_EXECUTION_SEQUENCE}
+        image: ${CICD_IMAGE}:latest
         ports:
         - containerPort: 80
+        readinessProbe:
+          httpGet:
+             path: /
+             port: 80
+             initialDelaySeconds: 5
+             periodSeconds: 5
+             successThreshold: 1
+        resources:
+          limits:
+            cpu: 500m
+            memory: 256Mi
+          requests:
+            cpu: 250m
+            memory: 128Mi
+---
+apiVersion: autoscaling/v2beta1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: personal
+  namespace: website
+spec:
+  scaleTargetRef:
+    apiVersion: extensions/v1beta1
+    kind: Deployment
+    name: personal
+  minReplicas: 1
+  maxReplicas: 10
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      targetAverageUtilization: 80
+  - type: Resource
+    resource:
+      name: memory
+      targetAverageUtilization: 80
 ---
 kind: Service
 apiVersion: v1
