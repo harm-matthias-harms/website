@@ -51,10 +51,10 @@
   export default {
     data() {
       return {
-        tools: ["kubernetes.png", "docker.jpeg", "nuxt.jpg", "rails.png", "rook.jpg", "scrapy.png", "rancher.jpg", "cockroachdb.jpg",
-          "postgresql.png"
+        tools: ["/kubernetes.png", "/docker.jpeg", "/nuxt.jpg", "/rails.png", "/rook.jpg", "/scrapy.png", "/rancher.jpg", "/cockroachdb.jpg",
+          "/postgresql.png"
         ],
-        languages: ["go.png", "js.png", "python.png", "ruby.png", "sql.png"]
+        languages: ["/go.png", "/js.png", "/python.png", "/ruby.png", "/sql.png"]
       }
     }
   }
