@@ -84,6 +84,7 @@ metadata:
   annotations:
     ingress.kubernetes.io/ssl-redirect: "true"
     certmanager.k8s.io/cluster-issuer: letsencrypt-prod
+    nginx.org/server-tokens: "false"
 spec:
   tls:
   - hosts:
