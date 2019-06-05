@@ -3,6 +3,25 @@ kind: Namespace
 metadata:
   name: website
 ---
+apiVersion: serving.knative.dev/v1alpha1
+kind: Service
+metadata:
+  name: matthias-serving
+  namespace: website
+spec:
+  template:
+    metadata:
+      annotations:
+        autoscaling.knative.dev/target: "100"
+    spec:
+      containers:
+      - image: ${CICD_IMAGE}:latest
+        readinessProbe:
+          httpGet:
+            path: /
+          initialDelaySeconds: 0
+          periodSeconds: 3
+---
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
@@ -23,22 +42,3 @@ spec:
       - destination:
           host: istio-ingressgateway.istio-system.svc.cluster.local
         weight: 100
----
-apiVersion: serving.knative.dev/v1alpha1
-kind: Service
-metadata:
-  name: matthias-serving
-  namespace: website
-spec:
-  template:
-    metadata:
-      annotations:
-        autoscaling.knative.dev/target: "100"
-    spec:
-      containers:
-      - image: ${CICD_IMAGE}:latest
-        readinessProbe:
-          httpGet:
-            path: /
-          initialDelaySeconds: 0
-          periodSeconds: 3
