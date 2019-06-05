@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/harm-matthias-harms/website.svg?branch=master)](https://travis-ci.com/harm-matthias-harms/website)
+
 # Website
 
 > My personal website.
