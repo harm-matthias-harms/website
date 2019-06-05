@@ -3,97 +3,43 @@ kind: Namespace
 metadata:
   name: website
 ---
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
 metadata:
-  name: personal
+  name: matthias-entry-route
   namespace: website
-  labels:
-    app: personal
 spec:
-  strategy:
-    type: RollingUpdate
-    rollingUpdate:
-     maxUnavailable: 25%
-     maxSurge: 1
-  selector:
-    matchLabels:
-      app: personal
+  gateways:
+  - knative-ingress-gateway.knative-serving.svc.cluster.local
+  hosts:
+  - matthias.it-dudes.de
+  http:
+  - match:
+    - uri:
+        prefix: "/"
+    rewrite:
+      authority: matthias-serving.webiste.it-dudes.de
+    route:
+      - destination:
+          host: istio-ingressgateway.istio-system.svc.cluster.local
+        weight: 100
+---
+apiVersion: serving.knative.dev/v1alpha1
+kind: Service
+metadata:
+  name: matthias-serving
+  namespace: website
+spec:
   template:
     metadata:
-      labels:
-        app: personal
+      annotations:
+        # Target 10 in-flight-requests per pod.
+        autoscaling.knative.dev/target: "100"
     spec:
-      imagePullSecrets:
-      - name: pipeline-docker-registry
       containers:
-      - name: personal
-        imagePullPolicy: Always
-        image: ${CICD_IMAGE}:latest
-        ports:
-        - containerPort: 80
-        resources:
-          limits:
-            cpu: 500m
-            memory: 256Mi
-          requests:
-            cpu: 250m
-            memory: 128Mi
----
-apiVersion: autoscaling/v2beta1
-kind: HorizontalPodAutoscaler
-metadata:
-  name: personal
-  namespace: website
-spec:
-  scaleTargetRef:
-    apiVersion: extensions/v1beta1
-    kind: Deployment
-    name: personal
-  minReplicas: 1
-  maxReplicas: 10
-  metrics:
-  - type: Resource
-    resource:
-      name: cpu
-      targetAverageUtilization: 80
-  - type: Resource
-    resource:
-      name: memory
-      targetAverageUtilization: 80
----
-kind: Service
-apiVersion: v1
-metadata:
-  namespace: website
-  name: personal-service
-spec:
-  selector:
-    app: personal
-  type: ClusterIP
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 80
----
-apiVersion: extensions/v1beta1
-kind: Ingress
-metadata:
-  name: peronal
-  namespace: website
-  annotations:
-    ingress.kubernetes.io/ssl-redirect: "true"
-    certmanager.k8s.io/cluster-issuer: letsencrypt-prod
-spec:
-  tls:
-  - hosts:
-    - matthias.it-dudes.de
-    secretName: personal-crt
-  rules:
-  - host: matthias.it-dudes.de
-    http:
-      paths:
-      - path: /
-        backend:
-          serviceName: personal-service
-          servicePort: 80
+      - image: ${CICD_IMAGE}:latest
+        readinessProbe:
+          httpGet:
+            path: /
+          initialDelaySeconds: 0
+          periodSeconds: 3
