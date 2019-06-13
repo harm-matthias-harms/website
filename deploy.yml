@@ -1,0 +1,43 @@
+apiVersion: serving.knative.dev/v1alpha1
+kind: Service
+metadata:
+  name: matthias
+spec:
+  template:
+    metadata:
+      annotations:
+        autoscaling.knative.dev/target: "100"
+    spec:
+      containers:
+      - image: harmmatthias/website
+        imagePullPolicy: Always
+        readinessProbe:
+          httpGet:
+            path: /
+          initialDelaySeconds: 0
+          periodSeconds: 1
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: matthias-website
+  namespace: istio-system
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    ingress.kubernetes.io/ssl-redirect: "true"
+    certmanager.k8s.io/cluster-issuer: letsencrypt-prod
+    nginx.ingress.kubernetes.io/service-upstream: "true" 
+    nginx.ingress.kubernetes.io/upstream-vhost: matthias.default.svc.cluster.local
+spec:
+  tls:
+  - hosts:
+    - matthias.it-dudes.de
+    secretName: matthias-crt
+  rules:
+  - host: matthias.it-dudes.de
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: istio-ingressgateway
+          servicePort: 80
