@@ -9,7 +9,7 @@
           But my interests go more into scalable web applications.
           For my open source and side projects, I love to use various tools and languages.
           <br />
-          <br />Currently, I'm building various cloud native applications with Go, Nuxt.js for Kubernetes.
+          <br />Currently, I'm building various cloud native applications with Go and Nuxt.js for Kubernetes.
         </p>
       </v-flex>
     </v-layout>
