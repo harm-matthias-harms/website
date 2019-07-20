@@ -12,13 +12,13 @@
   },
   "dependencies": {
     "cross-env": "^5.2.0",
-    "nuxt": "^2.4.0",
-    "vuetify": "^1.5.0",
-    "vuetify-loader": "^1.2.0"
+    "nuxt": "^2.8.1",
+    "vuetify": "^1.5.16",
+    "vuetify-loader": "^1.2.2"
   },
   "devDependencies": {
     "font-awesome": "4.7.0",
-    "nodemon": "^1.18.9",
+    "nodemon": "^1.19.1",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2"
   }
