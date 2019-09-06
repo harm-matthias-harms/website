@@ -4,12 +4,13 @@
       <v-flex lg6 md8 xs12>
         <h5 class="headline">About Harm Matthias Harms</h5>
         <p class="subheading">
-          I'm a full-stack developer based in Hamburg, Germany.
-          Currently, I'm writing my bachelor thesis about identifying small objects in images.
-          But my interests go more into scalable web applications.
+          I'm a full-stack developer based in Hamburg, Germany. 
+          Currently, I'm writing my bachelor thesis about identifying small objects in images. 
+          However, my interests go more into scalable web applications. 
           For my open source and side projects, I love to use various tools and languages.
           <br />
-          <br />Currently, I'm building various cloud native applications with Go and Nuxt.js for Kubernetes.
+          <br />
+          Currently, I'm building various cloud-native applications with Go and Nuxt.js for Kubernetes.
         </p>
       </v-flex>
     </v-layout>

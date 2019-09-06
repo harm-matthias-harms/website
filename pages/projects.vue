@@ -8,8 +8,9 @@
           <br />2017 - today
         </h6>
         <p class="subheading">
-          I'm currently working at a consulting company for housing companies. In my position as a full stack
-          developer, I'm planning and developing different big data and analytical applications.
+          I'm currently working at a consulting company for housing companies.
+          In my position as a full-stack developer,
+          I'm planning and developing different big data and analytical applications.
         </p>
       </v-flex>
     </v-layout>
@@ -21,9 +22,11 @@
           <br />2018 - 2019
         </h6>
         <p class="subheading">
-          In a university course we were building real applications with real customers. I was managing a team, by side
-          of programming and planning work, that was building an App for Weinmann Emergency. The App should improve the
-          information flow of patient data and life signs on the way from the emergency side to the hospital.
+          In a university course, we were building real applications with real customers.
+          I was managing a team, by the side of programming and planning work,
+          that was creating an App for Weinmann Emergency.
+          The App should improve the information flow of patient data and life signs on
+          the way from the emergency side to the hospital.
         </p>
       </v-flex>
     </v-layout>
@@ -34,10 +37,12 @@
           <br />2018 - today
         </h6>
         <p class="subheading">
-          With the medical exercises in EU-Modex-Cycles (EU Civil Protection) getting bigger and bigger the patient and
-          medical inject planning can't be done by pen and paper anymore. Therefore I have written a planning tool. The
-          system was battle tested multiple times in some of the worlds biggest medical exercises. I hopefully will be
-          able to release the software under open source license soon on Github. Also, the development will be ongoing.
+          With the medical exercises in EU-Modex-Cycles (EU Civil Protection)
+          getting bigger and bigger the patient and medical inject planning can't
+          be done by pen and paper anymore. Therefore I have written a planning tool.
+          The system was battle-tested multiple times in some of the worlds biggest
+          medical exercises. I hopefully will be able to release the software under open
+          source license soon on Github. Also, development is ongoing.
         </p>
       </v-flex>
     </v-layout>
