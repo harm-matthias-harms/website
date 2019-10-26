@@ -90,4 +90,4 @@ sw.*
 # Other files
 Dockerfile
 .rancher-pipeline.yml
-deployment.yml
+Riofile

@@ -13,8 +13,6 @@ COPY . .
 
 RUN yarn run generate
 
-RUN ls
-
 ## PRODUCTION
 FROM nginx:alpine
 

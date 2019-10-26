@@ -4,13 +4,8 @@
       <v-flex lg6 md8 xs12>
         <h5 class="headline">About Harm Matthias Harms</h5>
         <p class="subheading">
-          I'm a full-stack developer based in Hamburg, Germany. 
-          Currently, I'm writing my bachelor thesis about identifying small objects in images. 
-          However, my interests go more into scalable web applications. 
-          For my open source and side projects, I love to use various tools and languages.
-          <br />
-          <br />
-          Currently, I'm building various cloud-native applications with Go and Nuxt.js for Kubernetes.
+          I'm a full-stack developer based in Hamburg, Germany. My interest goes into scalable web applications, as well as SaaS and PaaS.
+          For my open source and side-projects, I like to explore new tools and languages. Currently, I'm building various cloud-native applications using Go and Nuxt.js, deployed on Kubernetes-based plattforms.
         </p>
       </v-flex>
     </v-layout>
@@ -45,9 +40,6 @@
       <v-flex lg6 md6 xs12>
         <v-layout row wrap>
           <v-flex
-            lg3
-            md6
-            xs12
             justify-center
             align-center
             text-xs-center
@@ -73,11 +65,11 @@ export default {
         "/docker.jpeg",
         "/nuxt.jpg",
         "/rails.png",
-        "/rook.jpg",
         "/scrapy.png",
         "/rancher.jpg",
-        "/cockroachdb.jpg",
-        "/postgresql.png"
+        "/postgresql.png",
+        "/mongo.jpeg",
+        "/rio.svg"
       ],
       languages: ["/go.png", "/js.png", "/python.png", "/ruby.png", "/sql.png"]
     };
