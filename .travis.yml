@@ -10,7 +10,7 @@ branches:
 install:
 - yarn install
 script:
-- yarn run generate
+- yarn generate
 deploy:
   provider: firebase
   skip_cleanup: true

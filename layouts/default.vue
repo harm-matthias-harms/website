@@ -1,16 +1,16 @@
 <template>
   <v-app>
-    <v-toolbar flat dense>
+    <v-app-bar app flat dense color="grey lighten-4">
       <v-spacer></v-spacer>
       <v-toolbar-items>
-        <v-btn flat to="/" nuxt>Home</v-btn>
-        <v-btn flat to="/about" nuxt>About Me</v-btn>
-        <v-btn flat to="/projects" nuxt>Projects</v-btn>
+        <v-btn text to="/" nuxt>Home</v-btn>
+        <v-btn text to="/about" nuxt>About Me</v-btn>
+        <v-btn text to="/projects" nuxt>Projects</v-btn>
       </v-toolbar-items>
       <v-spacer></v-spacer>
-    </v-toolbar>
+    </v-app-bar>
     <v-content>
-      <v-container>
+      <v-container fluid>
         <nuxt />
       </v-container>
     </v-content>
