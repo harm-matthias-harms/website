@@ -1,7 +1,7 @@
 const pkg = require("./package");
 
 module.exports = {
-  mode: "universal",
+  mode: "spa",
 
   /*
    ** Headers of the page
@@ -47,7 +47,7 @@ module.exports = {
    */
   build: {
     extractCSS: true,
-    
+
     /*
      ** You can extend webpack config here
      */
@@ -55,6 +55,9 @@ module.exports = {
   },
   buildModules: ["@nuxtjs/vuetify"],
   vuetify: {
-    defaultAssets: { icons: "fa" }
+    defaultAssets: { icons: "fa" },
+    loader: {
+      progressiveImages: true
+    }
   }
 };

@@ -10,13 +10,9 @@
       <v-spacer></v-spacer>
     </v-app-bar>
     <v-content>
-      <v-container fluid>
+      <v-container>
         <nuxt />
       </v-container>
     </v-content>
   </v-app>
 </template>
-
-<script>
-export default {};
-</script>

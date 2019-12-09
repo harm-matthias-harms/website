@@ -4,7 +4,7 @@
       <v-row>
         <v-col class="text-center">
           <v-avatar size="256" color="grey lighten-4">
-            <img src="~/assets/images/me.jpg" class="profile-img" />
+            <v-img src="~/assets/images/me.jpg" class="profile-img" />
           </v-avatar>
         </v-col>
       </v-row>
@@ -21,7 +21,7 @@
           <v-btn depressed large href="mailto:mail@matthiasharms.dev">
             <v-icon left>fa-envelope</v-icon>Email
           </v-btn>
-          <v-btn depressed large href="https://github.com/harm-matthias-harms">
+          <v-btn depressed large href="https://github.com/harm-matthias-harms" target="_blank">
             <v-icon left>fab fa-github</v-icon>Code
           </v-btn>
         </v-col>
@@ -29,10 +29,6 @@
     </v-col>
   </v-row>
 </template>
-
-<script>
-export default {};
-</script>
 
 <style>
 img.profile-img {
