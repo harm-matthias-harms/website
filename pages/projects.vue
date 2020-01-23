@@ -44,7 +44,8 @@ export default {
           time: "2018 - today",
           title: "EU Modex - Roleplay Management",
           text:
-            "With the medical exercises in EU-Modex-Cycles (EU Civil Protection) getting bigger and bigger the patient and medical inject planning can't be done by pen and paper anymore. Therefore I have written a planning tool. The system was battle-tested multiple times in some of the worlds biggest medical exercises. I hopefully will be able to release the software under open source license soon on Github. Also, development is ongoing."
+            "With the medical exercises in EU-Modex-Cycles (EU Civil Protection) getting bigger and bigger the patient and medical inject planning can't be done by pen and paper anymore. Therefore I have written a planning tool. The system was battle-tested multiple times in some of the worlds biggest medical exercises.",
+          external: "https://github.com/harm-matthias-harms/rpm"
         },
         {
           time: "2017 - today",
