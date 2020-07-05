@@ -18,10 +18,10 @@
       </v-row>
       <v-row>
         <v-col class="text-center">
-          <v-btn depressed large href="mailto:mail@matthiasharms.dev">
+          <v-btn depressed large color="primary" href="mailto:mail@matthiasharms.dev">
             <v-icon left>fa-envelope</v-icon>Email
           </v-btn>
-          <v-btn depressed large href="https://github.com/harm-matthias-harms" target="_blank">
+          <v-btn depressed large color="secondary" href="https://github.com/harm-matthias-harms" target="_blank">
             <v-icon left>fab fa-github</v-icon>Code
           </v-btn>
         </v-col>

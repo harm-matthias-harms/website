@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar app flat dense color="grey lighten-4">
+    <v-app-bar app flat dense color="white">
       <v-spacer></v-spacer>
       <v-toolbar-items>
         <v-btn text to="/" nuxt>Home</v-btn>

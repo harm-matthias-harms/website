@@ -17,7 +17,7 @@ module.exports = {
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+        href: "https://fonts.googleapis.com/css?family=Lato:300,400,500,700"
       }
     ]
   },
@@ -55,7 +55,12 @@ module.exports = {
   },
   buildModules: ["@nuxtjs/vuetify"],
   vuetify: {
-    defaultAssets: { icons: "fa" },
+    defaultAssets: { 
+      icons: "fa",
+      font: { 
+        family: "Lato" 
+      } 
+    },
     loader: {
       progressiveImages: true
     }
