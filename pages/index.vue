@@ -10,10 +10,10 @@
       </v-row>
       <v-row>
         <v-col class="text-center">
-          <h3 class="display-2">Harm Matthias Harms</h3>
-          <h5
+          <h1 class="display-2">Harm Matthias Harms</h1>
+          <h2
             class="headline font-weight-light"
-          >Student, Full Stack Developer, Kubernetes Lover, USAR - Troopleader</h5>
+          >Student, Full Stack Developer, Kubernetes Lover, USAR - Troopleader</h2>
         </v-col>
       </v-row>
       <v-row>
