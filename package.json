@@ -1,8 +1,8 @@
 {
   "name": "personal",
   "version": "1.0.0",
-  "description": "My personal website.",
-  "author": "Matze",
+  "description": "Harm Matthias Harms's portfolio",
+  "author": "Harm Matthias Harms",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -14,8 +14,6 @@
     "nuxt": "^2.13.3"
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.13.1",
-    "@nuxtjs/vuetify": "^2.0.0-beta.2",
-    "gm": "^1.23.1"
+    "@nuxtjs/vuetify": "v2.0.0-beta.2"
   }
 }

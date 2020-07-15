@@ -12,7 +12,7 @@
             <v-card-subtitle v-text="item.time" v-if="$vuetify.breakpoint.smAndDown"></v-card-subtitle>
             <v-card-text class="body-1 white text--primary pt-3" v-text="item.text"></v-card-text>
             <v-card-actions v-if="item.external">
-              <v-btn text :href="item.external" target="_blank">
+              <v-btn text :href="item.external" target="_blank" rel="noopener">
                 <v-icon left>fab fa-github</v-icon>View on Github
               </v-btn>
             </v-card-actions>
@@ -61,6 +61,6 @@ export default {
 </script>
 <style>
 .v-card__title {
-  word-break: break-word;
+  word-break: break-word !important;
 }
 </style>

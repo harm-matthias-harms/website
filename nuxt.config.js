@@ -7,6 +7,9 @@ module.exports = {
    ** Headers of the page
    */
   head: {
+    htmlAttrs: {
+      lang: "en"
+    },
     title: "Harm Matthias Harms",
     meta: [
       { charset: "utf-8" },
@@ -15,10 +18,6 @@ module.exports = {
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css?family=Lato:300,400,500,700"
-      }
     ]
   },
 
@@ -46,8 +45,6 @@ module.exports = {
    ** Build configuration
    */
   build: {
-    extractCSS: true,
-
     /*
      ** You can extend webpack config here
      */
@@ -55,11 +52,11 @@ module.exports = {
   },
   buildModules: ["@nuxtjs/vuetify"],
   vuetify: {
-    defaultAssets: { 
+    defaultAssets: {
       icons: "fa",
-      font: { 
-        family: "Lato" 
-      } 
+      font: {
+        family: "Lato"
+      }
     },
     loader: {
       progressiveImages: true
