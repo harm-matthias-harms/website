@@ -9,10 +9,10 @@
       </v-toolbar-items>
       <v-spacer></v-spacer>
     </v-app-bar>
-    <v-content>
+    <v-main>
       <v-container>
         <nuxt />
       </v-container>
-    </v-content>
+    </v-main>
   </v-app>
 </template>

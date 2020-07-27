@@ -1,6 +1,6 @@
 <template>
   <v-row justify="center">
-    <v-col lg="9">
+    <v-col lg="8">
       <h1 class="display-1 text-center mb-5">Some of my Projects</h1>
       <v-timeline align-top :dense="$vuetify.breakpoint.smAndDown">
         <v-timeline-item fill-dot v-for="(item, i) in data" :key="i">
@@ -12,7 +12,7 @@
             <v-card-subtitle v-text="item.time" v-if="$vuetify.breakpoint.smAndDown"></v-card-subtitle>
             <v-card-text class="body-1 white text--primary pt-3" v-text="item.text"></v-card-text>
             <v-card-actions v-if="item.external">
-              <v-btn text :href="item.external" target="_blank">
+              <v-btn text :href="item.external" target="_blank" rel="noopener">
                 <v-icon left>fab fa-github</v-icon>View on Github
               </v-btn>
             </v-card-actions>
@@ -39,7 +39,7 @@ export default {
           time: "2017 - today",
           title: "Analyse & Konzepte",
           text:
-            "I'm currently working at a prop-tech start-up. As a full-stack developer, I'm planning and developing different big data and analytical applications. Besides developing, I'm educating newer colleagues."
+            "I'm currently working at a prop-tech start-up. As a full-stack developer, I'm planning and developing different big data and analytical applications. Besides developing, I enjoy educating newer colleagues."
         },
         {
           time: "2019",
@@ -61,6 +61,6 @@ export default {
 </script>
 <style>
 .v-card__title {
-  word-break: break-word;
+  word-break: break-word !important;
 }
 </style>

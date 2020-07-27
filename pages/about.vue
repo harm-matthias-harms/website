@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-row justify="center">
-      <v-col lg="8">
+      <v-col md="8" lg="6">
         <h1 class="display-1">About Harm Matthias Harms</h1>
         <p class="body-1">
           I'm a full-stack developer based in Hamburg, Germany.
@@ -12,7 +12,7 @@
       </v-col>
     </v-row>
     <v-row justify="center">
-      <v-col lg="8">
+      <v-col md="8" lg="6">
         <h5 class="headline">Languages</h5>
         <v-chip label color="primary" class="mr-2 mt-2" v-for="(language, i) in languages" :key="i">
           <v-icon left>{{language.icon}}</v-icon>
@@ -21,7 +21,7 @@
       </v-col>
     </v-row>
     <v-row justify="center">
-      <v-col lg="8">
+      <v-col md="8" lg="6">
         <h5 class="headline">Tools</h5>
         <v-chip label color="secondary" class="mr-2 mt-2" v-for="(tool, i) in tools" :key="i">
           <v-icon left>{{tool.icon}}</v-icon>
