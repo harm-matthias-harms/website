@@ -11,5 +11,7 @@ post-checkout: &post-checkoout
   commands:
     git pull:
       run: git pull
+    npm install:
+      run: npm install
 post-merge: *post-checkoout
 post-rewrite: *post-checkoout
