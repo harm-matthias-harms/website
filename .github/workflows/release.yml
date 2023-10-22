@@ -15,13 +15,20 @@ jobs:
     uses: ./.github/workflows/lint.yml
   test:
     uses: ./.github/workflows/test.yml
+  build:
+    uses: ./.github/workflows/build.yml
+    needs:
+      - lint
+      - test
   release:
     runs-on: ubuntu-latest
-    needs: [ lint, test ]
+    needs: [ build ]
     steps:
       - uses: actions/checkout@v4
-      - run: npm ci
-      - run: NITRO_PRESET=firebase npm run build
+      - uses: actions/download-artifact@master
+        with:
+          name: .output
+          path: .output
       - uses: w9jds/firebase-action@v12.6.2
         with:
           args: deploy
