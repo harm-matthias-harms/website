@@ -15,5 +15,10 @@ export default defineNuxtConfig({
                 lang: 'en'
             }
         }
+    },
+    nitro: {
+        firebase: {
+            gen: 2
+        }
     }
 })
