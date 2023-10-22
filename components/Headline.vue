@@ -4,12 +4,12 @@ const {as} = toRefs(props)
 
 const paddingBottom = computed(() => {
   return {
-    'h1': 'pb-10',
-    'h2': 'pb-10',
-    'h3': 'pb-8',
-    'h4': 'pb-6',
-    'h5': 'pb-4',
-    'h6': 'pb-4',
+    'h1': 'mb-10',
+    'h2': 'mb-10',
+    'h3': 'mb-8',
+    'h4': 'mb-6',
+    'h5': 'mb-4',
+    'h6': 'mb-4',
   }[as.value]
 })
 

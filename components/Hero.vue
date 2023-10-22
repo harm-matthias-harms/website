@@ -11,9 +11,10 @@ const imageSrc = computed(() => {
     <div class="flex flex-col-reverse md:flex-row gap-10 md:gap-20 align-middle justify-center">
       <div class="flex flex-col justify-center max-w-md">
         <Headline as="h1">Harm Matthias Harms</Headline>
-        <Headline as="h5">One Person Frameworks • Small Teams - Fostering Innovation and Efficiency • Sustainable
+        <Paragraph class="text-lg font-semibold">
+          One Person Frameworks • Small Teams - Fostering Innovation and Efficiency • Sustainable
           Software
-        </Headline>
+        </Paragraph>
         <div class="flex gap-4">
           <UButton target="_blank" to="https://www.linkedin.com/in/harm-matthias-harms-675682186/">
             LinkedIn
@@ -22,7 +23,7 @@ const imageSrc = computed(() => {
           <UButton color="gray" to="mailto:mail@matthiasharms.dev">Email</UButton>
         </div>
       </div>
-      <NuxtImg :src="imageSrc" class="rounded-lg w-96"/>
+      <NuxtImg :src="imageSrc" alt="Image of Harm Matthias Harms" class="rounded-lg w-96"/>
     </div>
   </div>
 </template>
