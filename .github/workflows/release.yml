@@ -15,22 +15,19 @@ jobs:
     uses: ./.github/workflows/lint.yml
   test:
     uses: ./.github/workflows/test.yml
-  build:
-    uses: ./.github/workflows/build.yml
+  release:
+    runs-on: ubuntu-latest
     needs:
       - lint
       - test
-  release:
-    runs-on: ubuntu-latest
-    needs: [ build ]
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/download-artifact@master
+      - uses: actions/setup-node@v4
         with:
-          name: .output
-          path: .output
-      - uses: w9jds/firebase-action@v12.6.2
-        with:
-          args: deploy
+          node-version: .tool-version
+      - run: npm install -g firebase-tools
+      - run: npm ci
+      - run: npm run build
         env:
-          GCP_SA_KEY: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_HMH_SIDEPROJECTS }}
+          NITRO_PRESET: firebase
+      - run: firebase deploy --token ${{ secrets.FIREBASE_SERVICE_ACCOUNT_HMH_SIDEPROJECTS }}
