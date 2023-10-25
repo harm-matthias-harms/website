@@ -31,4 +31,6 @@ jobs:
       - run: npm run build
         env:
           NITRO_PRESET: firebase
-      - run: firebase deploy --token ${{ secrets.FIREBASE_SERVICE_ACCOUNT_HMH_SIDEPROJECTS }}
+      - run: firebase deploy
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_HMH_SIDEPROJECTS }}
