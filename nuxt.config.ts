@@ -2,6 +2,9 @@
 export default defineNuxtConfig({
     devtools: {enabled: true},
     modules: ['@nuxt/ui', '@nuxtjs/color-mode', "@nuxt/image"],
+    ui: {
+        icons: ['heroicons', 'simple-icons']
+    },
     app: {
         head: {
             title: 'About Harm Matthias Harms',

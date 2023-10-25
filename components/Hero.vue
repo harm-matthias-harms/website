@@ -16,14 +16,21 @@ const imageSrc = computed(() => {
           Software
         </Paragraph>
         <div class="flex gap-4">
-          <UButton target="_blank" to="https://www.linkedin.com/in/harm-matthias-harms-675682186/">
+          <UButton icon="i-simple-icons-linkedin" target="_blank"
+                   to="https://www.linkedin.com/in/harm-matthias-harms-675682186/">
             LinkedIn
           </UButton>
-          <UButton color="gray" target="_blank" to="https://github.com/harm-matthias-harms">GitHub</UButton>
-          <UButton color="gray" to="mailto:mail@matthiasharms.dev">Email</UButton>
+          <UButton color="gray" icon="i-simple-icons-github" target="_blank"
+                   to="https://github.com/harm-matthias-harms">
+            GitHub
+          </UButton>
+          <UButton color="gray" icon="i-heroicons-envelope-20-solid" to="mailto:mail@matthiasharms.dev">Email
+          </UButton>
         </div>
       </div>
-      <NuxtImg :src="imageSrc" alt="Image of Harm Matthias Harms" class="rounded-lg w-96"/>
+      <ClientOnly>
+        <NuxtImg :src="imageSrc" alt="Image of Harm Matthias Harms" class="rounded-lg w-96"/>
+      </ClientOnly>
     </div>
   </div>
 </template>
