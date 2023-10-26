@@ -1,9 +1,6 @@
 name: Release
 
 on:
-  push:
-    branches:
-      - main
   release:
     types:
       - published
@@ -19,6 +16,30 @@ jobs:
     uses: ./.github/workflows/test.yml
   release:
     runs-on: ubuntu-latest
-    needs: [lint, test]
+    needs:
+      - lint
+      - test
     steps:
-      - run: echo "Releasing..."
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .tool-version
+          cache: 'npm'
+      - run: npm install -g firebase-tools
+      - run: npm ci
+      - run: npm run build
+        env:
+          NITRO_PRESET: firebase
+      - name: Manipulate build for firebase
+        run: |
+          jq '.main |= "server/index.mjs"' .output/server/package.json > .output/package.json
+          rm -f .output/server/package.json
+          mv .output/server/node_modules .output/.
+      - run: echo $FIREBASE_SERVICE_ACCOUNT_HMH_SIDEPROJECTS > service-account.json
+        env:
+          FIREBASE_SERVICE_ACCOUNT_HMH_SIDEPROJECTS: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_HMH_SIDEPROJECTS }}
+      - run: firebase deploy
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: service-account.json
+      - if: success() || failure()
+        run: rm service-account.json
