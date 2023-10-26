@@ -37,7 +37,7 @@ jobs:
           rm -f .output/server/package.json
           mv .output/server/node_modules .output/.
       - name: Prepare Google Application Credentials
-        run: echo "${{ secrets.FIREBASE_SERVICE_ACCOUNT_HMH_SIDEPROJECTS }}" > google-application-credentials.json
+        run: echo ${{ secrets.FIREBASE_SERVICE_ACCOUNT_HMH_SIDEPROJECTS }} > google-application-credentials.json
       - run: firebase deploy
         env:
           GOOGLE_APPLICATION_CREDENTIALS: google-application-credentials.json
