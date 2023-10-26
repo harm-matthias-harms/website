@@ -36,12 +36,11 @@ jobs:
           jq '.main |= "server/index.mjs"' .output/server/package.json > .output/package.json
           rm -f .output/server/package.json
           mv .output/server/node_modules .output/.
-      - name: Prepare Google Application Credentials
-        run: echo ${{ secrets.FIREBASE_SERVICE_ACCOUNT_HMH_SIDEPROJECTS }} > google-application-credentials.json
+      - run: echo $FIREBASE_SERVICE_ACCOUNT_HMH_SIDEPROJECTS > service-account.json
+        env:
+          FIREBASE_SERVICE_ACCOUNT_HMH_SIDEPROJECTS: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_HMH_SIDEPROJECTS }}
       - run: firebase deploy
         env:
-          GOOGLE_APPLICATION_CREDENTIALS: google-application-credentials.json
-      - name: Remove credentials file
-        if: success() || failure()
-        run: |
-          rm google-application-credentials.json
+          GOOGLE_APPLICATION_CREDENTIALS: service-account.json
+      - if: success() || failure()
+        run: rm service-account.json
