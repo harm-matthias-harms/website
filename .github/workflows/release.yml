@@ -31,9 +31,19 @@ jobs:
       - run: npm run build
         env:
           NITRO_PRESET: firebase
-      - run: echo $FIREBASE_SERVICE_ACCOUNT_HMH_SIDEPROJECTS > service-account.json
-        env:
-          FIREBASE_SERVICE_ACCOUNT_HMH_SIDEPROJECTS: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_HMH_SIDEPROJECTS }}
+      - name: Manipulate build for firebase
+        run: |
+          jq '.main |= "server/index.mjs"' .output/server/package.json > .output/package.json
+          rm -f .output/server/package.json
+          mv .output/server/node_modules .output/.
+      - name: Prepare Google Application Credentials
+        shell: bash
+        run: |
+          echo "${{ secrets.FIREBASE_SERVICE_ACCOUNT_HMH_SIDEPROJECTS }}" | base64 --decode > "google-application-credentials.json"
       - run: firebase deploy
         env:
-          GOOGLE_APPLICATION_CREDENTIALS: service-account.json
+          GOOGLE_APPLICATION_CREDENTIALS: google-application-credentials.json
+      - name: Remove credentials file
+        if: success() || failure()
+        run: |
+          rm google-application-credentials.json

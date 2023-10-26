@@ -1,6 +1,6 @@
 {
   "functions": {
-    "source": ".output/server"
+    "source": ".output"
   },
   "hosting": [
     {
