@@ -1,0 +1,55 @@
+[
+  {
+    "title": "Ruby on Rails",
+    "description": "Proficient in developing scalable and efficient web applications using Ruby on Rails, with a strong understanding of PostgreSQL for database management, Redis for caching and queuing, and Docker for containerization.",
+    "badges": [
+      "Ruby on Rails",
+      "PostgreSQL",
+      "Redis",
+      "Docker"
+    ]
+  },
+  {
+    "title": "Web Crawling",
+    "description": "Expert in web crawling using Crawlee, with the ability to handle large data sets using PostgreSQL and MongoDB. Experienced in Event-Driven Architecture, Anti-Captcha strategies, and Data Deduplication methods to ensure clean and accurate data.",
+    "badges": [
+      "Crawlee",
+      "PostgreSQL",
+      "MongoDB",
+      "Event-Driven Architecture",
+      "Anti-Captcha",
+      "Data Deduplication"
+    ]
+  },
+  {
+    "title": "Cloud Infrastructure",
+    "description": "Skilled in designing and managing cloud infrastructure using Terraform, Kubernetes, ArgoCD, and Keda. Proficient in monitoring tools such as Prometheus and Grafana to ensure optimal performance and availability.",
+    "badges": [
+      "Terraform",
+      "Kubernetes",
+      "ArgoCD",
+      "Keda",
+      "Prometheus",
+      "Grafana"
+    ]
+  },
+  {
+    "title": "Web Applications",
+    "description": "Experienced in building rich and interactive web applications using Vue.js and Nuxt.js. Also proficient in backend development using Golang, known for its efficiency and scalability.",
+    "badges": [
+      "Vue.js",
+      "Nuxt.js",
+      "Golang"
+    ]
+  },
+  {
+    "title": "Computer Vision",
+    "description": "Specialized in Computer Vision, leveraging PyTorch and Transformers for machine learning tasks. Skilled in Gaze Estimation and Object Detection techniques for advanced image and video analysis.",
+    "badges": [
+      "PyTorch",
+      "Transformers",
+      "Gaze Estimation",
+      "Object Detection"
+    ]
+  }
+]
