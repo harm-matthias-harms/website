@@ -5,6 +5,7 @@
         <Navbar/>
         <div class="grow relative">
           <Hero/>
+          <Expertises/>
         </div>
       </div>
     </UContainer>
