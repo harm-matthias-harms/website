@@ -7,7 +7,7 @@ const imageSrc = computed(() => {
 </script>
 
 <template>
-  <div class="md:py-20">
+  <div class="md:my-20">
     <div class="flex flex-col-reverse md:flex-row gap-10 md:gap-20 align-middle justify-center">
       <div class="flex flex-col justify-center max-w-md">
         <Headline as="h1">Harm Matthias Harms</Headline>
