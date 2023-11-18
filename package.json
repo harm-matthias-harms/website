@@ -14,7 +14,7 @@
     "@nuxt/devtools": "1.0.2",
     "@nuxt/image": "1.0.0",
     "@nuxt/ui": "2.10.0",
-    "@nuxtjs/color-mode": "3.3.0",
+    "@nuxtjs/color-mode": "3.3.2",
     "firebase-functions": "4.5.0",
     "nuxt": "3.8.1",
     "vue": "3.3.8",
