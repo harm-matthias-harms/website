@@ -16,7 +16,7 @@
     "@nuxt/ui": "2.12.3",
     "@nuxtjs/color-mode": "3.3.2",
     "firebase-functions": "4.6.0",
-    "nuxt": "3.9.3",
+    "nuxt": "3.10.0",
     "vue": "3.4.15",
     "vue-router": "4.2.5"
   }
