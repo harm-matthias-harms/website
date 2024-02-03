@@ -1,10 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "prHourlyLimit": 0,
-  "prConcurrentLimit": 0,
-  "timezone": "Europe/Berlin",
-  "schedule": ["after 5am and before 10am on Saturday"],
-  "enabledManagers": [
-    "asdf"
+  "extends": [
+    "github>harm-matthias-harms/template//.github/renovate"
   ]
 }
