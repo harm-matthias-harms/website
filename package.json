@@ -12,7 +12,7 @@
   "devDependencies": {
     "@iconify-json/simple-icons": "1.1.97",
     "@nuxt/devtools": "1.1.5",
-    "@nuxt/image": "1.4.0",
+    "@nuxt/image": "1.5.0",
     "@nuxt/ui": "2.15.1",
     "@nuxtjs/color-mode": "3.3.3",
     "firebase-functions": "4.8.2",
