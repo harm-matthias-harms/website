@@ -13,7 +13,7 @@
     "@iconify-json/simple-icons": "1.1.101",
     "@nuxt/devtools": "1.2.0",
     "@nuxt/image": "1.7.0",
-    "@nuxt/ui": "2.15.2",
+    "@nuxt/ui": "2.16.0",
     "@nuxtjs/color-mode": "3.4.1",
     "firebase-functions": "5.0.1",
     "nuxt": "3.11.2",
