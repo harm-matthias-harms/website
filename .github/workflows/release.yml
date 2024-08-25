@@ -10,21 +10,14 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  lint:
-    uses: ./.github/workflows/lint.yml
-  test:
-    uses: ./.github/workflows/test.yml
   release:
     runs-on: ubuntu-latest
-    needs:
-      - lint
-      - test
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version-file: .tool-version
-          cache: 'npm'
+          node-version-file: .tool-versions
+          cache: "npm"
       - run: npm install -g firebase-tools
       - run: npm ci
       - run: npm run build
