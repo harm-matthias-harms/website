@@ -34,6 +34,18 @@
     ]
   },
   {
+    "title": "Data Pipelines",
+    "description": "Experienced in designing and implementing data pipelines using Kedro, with a solid understanding of data analysis and processing using Polars and Pandas. Familiar with leveraging PyTorch for machine learning tasks within pipelines, and capable of handling geospatial data with GeoPandas.",
+    "badges": [
+      "Kedro",
+      "Data Analysis",
+      "Pytorch",
+      "Polars",
+      "Pandas",
+      "GeoPandas"
+    ]
+  },
+  {
     "title": "Web Applications",
     "description": "Experienced in building rich and interactive web applications using Vue.js and Nuxt.js. Also proficient in backend development using Golang.",
     "badges": [
