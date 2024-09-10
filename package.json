@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "@iconify-json/simple-icons": "1.2.2",
-    "@nuxt/devtools": "1.4.1",
+    "@nuxt/devtools": "1.4.2",
     "@nuxt/image": "1.8.0",
     "@nuxt/ui": "2.18.4",
     "@nuxtjs/color-mode": "3.4.4",
