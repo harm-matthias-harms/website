@@ -16,7 +16,7 @@ jobs:
       pull-requests: write
     runs-on: ubuntu-latest
     steps:
-      - uses: harm-matthias-harms/calendar-version@v0
+      - uses: harm-matthias-harms/calendar-version@v1
         id: calendar-version
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
