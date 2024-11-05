@@ -10,7 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@iconify-json/simple-icons": "1.2.10",
+    "@iconify-json/simple-icons": "1.2.11",
     "@nuxt/devtools": "1.6.0",
     "@nuxt/image": "1.8.1",
     "@nuxt/ui": "2.18.7",
