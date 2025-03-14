@@ -20,11 +20,11 @@ const imageSrc = computed(() => {
                    to="https://www.linkedin.com/in/harm-matthias-harms-675682186/">
             LinkedIn
           </UButton>
-          <UButton color="gray" icon="i-simple-icons-github" target="_blank"
+          <UButton color="neutral" variant="outline" icon="i-simple-icons-github" target="_blank"
                    to="https://github.com/harm-matthias-harms">
             GitHub
           </UButton>
-          <UButton color="gray" icon="i-heroicons-envelope-20-solid" to="mailto:mail@matthiasharms.dev">Email
+          <UButton color="neutral" variant="outline" icon="i-heroicons-envelope-20-solid" to="mailto:mail@matthiasharms.dev">Email
           </UButton>
         </div>
       </div>
