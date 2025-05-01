@@ -1,4 +1,3 @@
-name-template: "$RESOLVED_VERSION 🤖"
 commitish: main
 template: |
   ## What’s Changed
@@ -24,4 +23,3 @@ autolabeler:
     branch: /feature\/.+/
   - label: dependency
     branch: /renovate\/.+/
-
