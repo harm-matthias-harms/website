@@ -1,6 +1,15 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "github>harm-matthias-harms/template//.github/renovate"
+    "config:recommended",
+    ":automergePatch",
+    ":prHourlyLimitNone",
+    ":prConcurrentLimitNone",
+    ":pinDependencies",
+    ":pinDevDependencies",
+    ":maintainLockFilesWeekly"
+  ],
+  "reviewers": [
+    "harm-matthias-harms"
   ]
 }
