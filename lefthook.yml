@@ -12,6 +12,7 @@ post-checkout: &post-checkoout
     git pull:
       run: git pull
     npm install:
-      run: npm install
+      run: mise install node && npm install
 post-merge: *post-checkoout
 post-rewrite: *post-checkoout
+
