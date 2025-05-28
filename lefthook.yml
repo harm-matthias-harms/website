@@ -11,8 +11,7 @@ post-checkout: &post-checkoout
   commands:
     git pull:
       run: git pull
-    npm install:
-      run: mise install node && npm install
+    bun install:
+      run: mise install bun && bun install
 post-merge: *post-checkoout
 post-rewrite: *post-checkoout
-
