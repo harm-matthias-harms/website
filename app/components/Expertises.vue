@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import expertises from '~/content/expertises.json'
+import expertises from '../../content/expertises.json'
 </script>
 
 <template>
