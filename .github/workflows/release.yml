@@ -23,7 +23,7 @@ jobs:
           install_args: "bun"
       - run: bun install --frozen-lockfile
       - run: bun run generate
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v4
         with:
           path: ./dist
   deploy:
