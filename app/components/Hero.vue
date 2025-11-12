@@ -2,7 +2,7 @@
 const colorMode = useColorMode()
 
 const imageSrc = computed(() => {
-  return colorMode.value === 'dark' ? '/matthiasharms-dark.jpg' : '/matthiasharms.jpg'
+  return colorMode.preference === 'dark' ? '/matthiasharms-dark.jpg' : '/matthiasharms.jpg'
 })
 </script>
 
