@@ -6,7 +6,7 @@
       "name": "nuxt-app",
       "devDependencies": {
         "@iconify-json/heroicons": "1.2.3",
-        "@iconify-json/simple-icons": "1.2.65",
+        "@iconify-json/simple-icons": "1.2.66",
         "@nuxt/devtools": "3.1.1",
         "@nuxt/image": "2.0.0",
         "@nuxt/ui": "4.3.0",
@@ -159,7 +159,7 @@
 
     "@iconify-json/heroicons": ["@iconify-json/heroicons@1.2.3", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-n+vmCEgTesRsOpp5AB5ILB6srsgsYK+bieoQBNlafvoEhjVXLq8nIGN4B0v/s4DUfa0dOrjwE/cKJgIKdJXOEg=="],
 
-    "@iconify-json/simple-icons": ["@iconify-json/simple-icons@1.2.65", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-v/O0UeqrDz6ASuRVE5g2Puo5aWyej4M/CxX6WYDBARgswwxK0mp3VQbGgPFEAAUU9QN02IjTgjMuO021gpWf2w=="],
+    "@iconify-json/simple-icons": ["@iconify-json/simple-icons@1.2.66", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-D1OnnXwiQXFkVMw5M+Bt8mPsXeMkQyGmMdrmN7lsQlKMUkfLOp6JWhnUJ92po51WXT046aF/zzqSmkKqg08p4Q=="],
 
     "@iconify/collections": ["@iconify/collections@1.0.632", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-7P03mskPh9cg6O/hnURtQ6nCNKamtKrTGHnVsGX6mJaTpsaLGlpsyGEpayS7trMLvtSvIgKhpN0SPzLwa8HKnA=="],
 
