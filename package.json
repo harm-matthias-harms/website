@@ -14,7 +14,7 @@
     "@iconify-json/simple-icons": "1.2.93",
     "@nuxt/devtools": "3.4.1",
     "@nuxt/image": "2.1.0",
-    "@nuxt/ui": "4.10.0",
+    "@nuxt/ui": "4.11.0",
     "@nuxtjs/color-mode": "4.0.1",
     "nuxt": "4.5.2",
     "tailwindcss": "4.3.3",
